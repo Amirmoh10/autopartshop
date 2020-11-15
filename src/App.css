@@ -1,38 +1,311 @@
+body {
+  font-family: "Lexend Peta", sans-serif;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.titleBox {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.primaryTtile {
+  color: grey;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  text-align: center;
+  animation-name: moveLeft;
+  animation-duration: 1s;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.secondaryTtile {
+  color: grey;
+  letter-spacing: 5px;
+  line-height: 1.5;
+  text-align: center;
+  animation-name: moveRight;
+  animation-duration: 1s;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
+@keyframes moveRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.brands-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.upper-brands {
+  display: flex;
+}
+
+.lower-brands {
+  display: flex;
+}
+
+.opel,
+.ford,
+.landRover,
+.volkswagen {
+  min-width: 30%;
+  height: 240px;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 0 7.5px 15px;
+  overflow: hidden;
+}
+
+.opel-title-box {
+  height: 90px;
+  padding: 0 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px solid rgba(255, 255, 255, 0.705);
+  background-color: rgba(0, 0, 0, 0.589);
+  position: absolute;
+}
+.opel-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 22px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.opel-subtitle {
+  font-weight: lighter;
+  font-size: 16px;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.opelImage {
+  background-image: url("./img/opel.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.opelImage {
+  background-image: url("./img/opel.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.fordImage {
+  background-image: url("./img/ford.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.landroverImage {
+  background-image: url("./img/landrover.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.volkswagenImage {
+  background-image: url("./img/volswagen.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.opelImage:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  cursor: pointer;
+}
+
+.fordImage:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  cursor: pointer;
+}
+
+.landroverImage:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  cursor: pointer;
+}
+
+.volkswagenImage:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  cursor: pointer;
+}
+
+.header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.logoBox {
+  height: 100%;
+  width: 70px;
+  margin-left: 80px;
+}
+
+.logoImage {
+  background-image: url("./img/webLogo.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.navigation {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.shopNav,
+.contactNav,
+.homeNav,
+.aboutUsNav {
+  padding: 0px 15px;
+  text-decoration: none;
+  color: black;
+}
+
+.footer {
+  padding-top: 10px;
+  background: #212121;
+  overflow: hidden;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.upperFooter {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25%;
+  height: auto;
+}
+
+.footerLogoBox {
+  height: 100px;
+  width: 100px;
+}
+
+.textWissem {
+  font-weight: 200;
+  color: gray;
+  font-size: 14px;
+  margin: 15px;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.avatar {
+  fill: #333333;
+}
+
+.customerServiceTitle {
+  color: white;
+}
+
+.customerService p:not(:first-child) {
+  color: #9a9a9a;
+}
+.contactText {
+  margin-top: 40px;
+}
+
+.testimonial {
+  max-width: 30%;
+}
+
+.testimonial p:not(:first-child) {
+  color: #9a9a9a;
+}
+
+.testimonialTitle {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.testimonialBox {
+  display: flex;
+  align-items: center;
+}
+
+.testimonialImageBox {
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.lowerFooter {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #333333;
+  background-color: #333333;
+  color: white;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
 }
